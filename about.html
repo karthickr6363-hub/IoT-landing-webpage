@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | IoT.Connect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { colors: { primary: '#3b82f6' }, fontFamily: { inter: ['Inter', 'sans-serif'], outfit: ['Outfit', 'sans-serif'] } } }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Header -->
+    <section class="relative pt-40 pb-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600"
+                alt="About Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gray-50/90 dark:bg-gray-950/90 backdrop-blur-sm"></div>
+        </div>
+        <div class="container mx-auto px-4 text-center hero-content relative z-10">
+            <h1 class="mb-6">Our <span class="text-blue-600">Mission</span></h1>
+            <p class="text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">To bridge the gap between hardware and
+                intelligence, empowering every business with the power of IoT.</p>
+        </div>
+    </section>
+
+    <!-- Company Story -->
+    <section class="py-24 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <div class="flex flex-col md:flex-row gap-12 items-center ">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
+                        alt="Team Work" class="rounded-3xl shadow-xl">
+                </div>
+                <div class="md:w-1/2 space-y-6">
+                    <h2 class="text-3xl">Founded in San Francisco</h2>
+                    <p class="text-gray-600 dark:text-gray-400">IoT.Connect started with a simple idea: that managing a
+                        fleet of devices should be as easy as checking your email. Since 2021, we've grown from a garage
+                        startup to a global platform powering thousands of critical infrastructures.</p>
+                    <p class="text-gray-600 dark:text-gray-400">Our engineers come from diverse backgrounds in silicon
+                        design, cloud architecture, and industrial automation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section (Rule 44: Compact size) -->
+    <section class="py-24 bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center mb-16">The Leadership Team</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div class="premium-card p-6 rounded-3xl text-center group bg-white dark:bg-gray-800">
+                    <div
+                        class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-gray-100 dark:border-gray-700 transition-transform group-hover:scale-105">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200"
+                            alt="CEO" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold">Alex Rivera</h4>
+                    <p class="text-xs text-blue-600 font-bold uppercase tracking-widest mt-1">Founder & CEO</p>
+                </div>
+                <div class="premium-card p-6 rounded-3xl text-center group bg-white dark:bg-gray-800">
+                    <div
+                        class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-gray-100 dark:border-gray-700 transition-transform group-hover:scale-105">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200"
+                            alt="CTO" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold">Sarah Chen</h4>
+                    <p class="text-xs text-blue-600 font-bold uppercase tracking-widest mt-1">CTO</p>
+                </div>
+                <div class="premium-card p-6 rounded-3xl text-center group bg-white dark:bg-gray-800">
+                    <div
+                        class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-gray-100 dark:border-gray-700 transition-transform group-hover:scale-105">
+                        <img src="https://images.unsplash.com/photo-1519085184581-9db511c2b596?auto=format&fit=crop&q=80&w=200"
+                            alt="COO" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold">James Wilson</h4>
+                    <p class="text-xs text-blue-600 font-bold uppercase tracking-widest mt-1">Head of Design</p>
+                </div>
+                <div class="premium-card p-6 rounded-3xl text-center group bg-white dark:bg-gray-800">
+                    <div
+                        class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-gray-100 dark:border-gray-700 transition-transform group-hover:scale-105">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200"
+                            alt="Support" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-lg font-bold">Elena Vance</h4>
+                    <p class="text-xs text-blue-600 font-bold uppercase tracking-widest mt-1">Customer Success</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="shared.js"></script>
+</body>
+
+</html>

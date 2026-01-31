@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Dashboard | IoT.Connect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { primary: '#3b82f6', secondary: '#1e293b' },
+                    fontFamily: { inter: ['Inter', 'sans-serif'], outfit: ['Outfit', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <div class="flex min-h-screen">
+
+        <!-- Sidebar Navigation -->
+        <aside
+            class="hidden lg:flex w-72 flex-col bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 fixed h-full z-40">
+            <div class="p-8">
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3208/3208764.png" alt="Logo" class="w-8 h-8">
+                    <span class="text-xl font-bold font-outfit">IoT.Connect</span>
+                </a>
+            </div>
+
+            <nav class="flex-grow px-4 space-y-2">
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-bold">
+                    <i class="fas fa-th-large text-lg"></i> Overview
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                    <i class="fas fa-microchip text-lg"></i> Fleet Manage
+                    <span class="ml-auto bg-blue-600 text-white text-[10px] px-2 py-0.5 rounded-full">1,284</span>
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                    <i class="fas fa-satellite text-lg"></i> Sat Uplinks
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                    <i class="fas fa-bell text-lg"></i> Alerts
+                    <span class="ml-auto bg-red-500 text-white text-[10px] px-2 py-0.5 rounded-full">3</span>
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                    <i class="fas fa-shield-alt text-lg"></i> Security Admin
+                </a>
+            </nav>
+
+            <div class="p-8 border-t border-gray-100 dark:border-gray-800">
+                <a href="login.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 font-bold transition-all">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-grow lg:ml-72 flex flex-col">
+
+            <!-- Dashboard Header -->
+            <header
+                class="h-20 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 sticky top-0 z-30 px-4 md:px-8 flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <button class="lg:hidden p-2 text-gray-500" onclick="toggleMobileDashboardNav()">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                    <h2 class="text-xl font-bold">Global Dashboard</h2>
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <button class="p-2 text-gray-400 hover:text-blue-600 transition-colors relative">
+                        <i class="fas fa-bell"></i>
+                        <span
+                            class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-gray-900"></span>
+                    </button>
+                    <button onclick="toggleTheme()" class="p-2 text-gray-400 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <div
+                        class="flex items-center gap-3 border-l border-gray-200 dark:border-gray-800 pl-6 cursor-pointer group">
+                        <div
+                            class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold group-hover:ring-4 ring-blue-500/20 transition-all">
+                            JD</div>
+                        <div class="hidden sm:block">
+                            <div class="text-xs font-bold">John Doe</div>
+                            <div class="text-[10px] text-gray-500 uppercase">Administrator</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="p-4 md:p-8 space-y-8">
+
+                <!-- Infrastructure Map Mockup (Phase 7) -->
+                <div class="premium-card p-0 rounded-[2.5rem] bg-white dark:bg-gray-900 overflow-hidden reveal">
+                    <div class="p-8 border-b border-gray-100 dark:border-gray-800 flex items-center justify-between">
+                        <div>
+                            <h3 class="text-lg mb-1">Fleet Distribution</h3>
+                            <p class="text-xs text-gray-500">Live global node density map</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <button
+                                class="px-3 py-1 rounded-lg bg-gray-50 dark:bg-gray-800 text-[10px] font-bold">Cluster
+                                View</button>
+                            <button class="px-3 py-1 rounded-lg bg-blue-600 text-white text-[10px] font-bold">Heat
+                                Map</button>
+                        </div>
+                    </div>
+                    <div class="h-[400px] bg-gray-100 dark:bg-gray-800/50 relative">
+                        <!-- Mock Map Background -->
+                        <div
+                            class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=1200')] bg-cover grayscale">
+                        </div>
+                        <!-- Pulse Points -->
+                        <div class="absolute top-1/4 left-1/4 w-4 h-4 bg-blue-600 rounded-full animate-ping"></div>
+                        <div class="absolute top-1/2 left-1/2 w-4 h-4 bg-blue-600 rounded-full animate-ping"
+                            style="animation-delay: 1s"></div>
+                        <div class="absolute top-1/3 right-1/4 w-4 h-4 bg-blue-600 rounded-full animate-ping"
+                            style="animation-delay: 2s"></div>
+
+                        <div class="absolute bottom-8 left-8 glass-premium p-4 rounded-2xl border border-gray-200/20">
+                            <div class="text-[10px] font-bold uppercase text-gray-400 mb-2">Live Statistics</div>
+                            <div class="flex gap-6">
+                                <div>
+                                    <div class="text-lg font-bold">98.4%</div>
+                                    <div class="text-[10px] text-green-500">Global Uptime</div>
+                                </div>
+                                <div>
+                                    <div class="text-lg font-bold">128ms</div>
+                                    <div class="text-[10px] text-blue-500">Avg Latency</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Row -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal" style="transition-delay: 0.1s">
+                    <div class="premium-card p-6 rounded-3xl bg-white dark:bg-gray-900 border-l-4 border-blue-600">
+                        <div class="text-gray-500 text-[10px] font-bold uppercase tracking-widest mb-1">Active Nodes
+                        </div>
+                        <div class="text-3xl font-bold">1,284</div>
+                        <div class="mt-4 text-[10px] text-green-500 font-bold"><i class="fas fa-caret-up"></i> 12% vs
+                            last month</div>
+                    </div>
+                    <div class="premium-card p-6 rounded-3xl bg-white dark:bg-gray-900 border-l-4 border-purple-600">
+                        <div class="text-gray-500 text-[10px] font-bold uppercase tracking-widest mb-1">Data Ingress
+                        </div>
+                        <div class="text-3xl font-bold">14.2 GB/h</div>
+                        <div class="mt-4 text-[10px] text-green-500 font-bold"><i class="fas fa-caret-up"></i> 5% vs
+                            last month</div>
+                    </div>
+                    <div class="premium-card p-6 rounded-3xl bg-white dark:bg-gray-900 border-l-4 border-orange-600">
+                        <div class="text-gray-500 text-[10px] font-bold uppercase tracking-widest mb-1">Open Alerts
+                        </div>
+                        <div class="text-3xl font-bold">03</div>
+                        <div class="mt-4 text-[10px] text-red-500 font-bold"><i class="fas fa-exclamation-triangle"></i>
+                            1 Critical</div>
+                    </div>
+                    <div class="premium-card p-6 rounded-3xl bg-white dark:bg-gray-900 border-l-4 border-emerald-600">
+                        <div class="text-gray-500 text-[10px] font-bold uppercase tracking-widest mb-1">Sat Uplink</div>
+                        <div class="text-3xl font-bold">Online</div>
+                        <div class="mt-4 text-[10px] text-emerald-500 font-bold"><i class="fas fa-signal"></i> Strength:
+                            88%</div>
+                    </div>
+                </div>
+
+                <!-- Charts Row -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 reveal" style="transition-delay: 0.2s">
+                    <div class="premium-card p-8 rounded-[2rem] bg-white dark:bg-gray-900">
+                        <div class="flex items-center justify-between mb-8">
+                            <h3 class="text-lg">Telemetry Stream</h3>
+                            <button class="text-blue-600 text-xs font-bold">Export Logs</button>
+                        </div>
+                        <div class="h-64">
+                            <canvas id="lineChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="premium-card p-8 rounded-[2rem] bg-white dark:bg-gray-900">
+                        <div class="flex items-center justify-between mb-8">
+                            <h3 class="text-lg">Power Consumption</h3>
+                            <select
+                                class="bg-gray-50 dark:bg-gray-800 border-none rounded-lg text-[10px] font-bold px-3 py-1 outline-none">
+                                <option>Watts (W)</option>
+                                <option>Amperes (A)</option>
+                            </select>
+                        </div>
+                        <div class="h-64 flex justify-center">
+                            <div class="w-full max-w-sm">
+                                <canvas id="barChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-dash-nav"
+        class="fixed inset-0 z-50 transform -translate-x-full transition-transform duration-300 lg:hidden">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="toggleMobileDashboardNav()"></div>
+        <div class="absolute inset-y-0 left-0 w-72 bg-white dark:bg-gray-900 shadow-2xl p-6">
+            <div class="flex items-center justify-between mb-10">
+                <div class="flex items-center gap-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3208/3208764.png" alt="Logo" class="w-8 h-8">
+                    <span class="text-xl font-bold font-outfit">IoT.Connect</span>
+                </div>
+                <button onclick="toggleMobileDashboardNav()" class="text-gray-500"><i class="fas fa-times"></i></button>
+            </div>
+            <nav class="space-y-4">
+                <a href="#" class="block px-4 py-3 rounded-xl bg-blue-600 text-white font-bold">Overview</a>
+                <a href="#" class="block px-4 py-3 rounded-xl text-gray-500">Fleet Management</a>
+                <a href="#" class="block px-4 py-3 rounded-xl text-gray-500">Alerts</a>
+                <a href="#" class="block px-4 py-3 rounded-xl text-gray-500">Security</a>
+                <hr class="border-gray-100 dark:border-gray-800 my-6">
+                <a href="login.html" class="block px-4 py-3 rounded-xl text-red-500 font-bold">Logout</a>
+            </nav>
+        </div>
+    </div>
+
+    <script src="shared.js"></script>
+    <script>
+        function toggleMobileDashboardNav() {
+            const nav = document.getElementById('mobile-dash-nav');
+            nav.classList.toggle('-translate-x-full');
+        }
+
+        // Initialize Charts
+        const ctxLine = document.getElementById('lineChart');
+        const ctxBar = document.getElementById('barChart');
+
+        const isDark = document.documentElement.classList.contains('dark');
+        const textColor = isDark ? '#94a3b8' : '#64748b';
+        const gridColor = isDark ? '#1e293b' : '#f1f5f9';
+
+        new Chart(ctxLine, {
+            type: 'line',
+            data: {
+                labels: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00'],
+                datasets: [{
+                    label: 'Requests/sec',
+                    data: [120, 190, 300, 250, 400, 350],
+                    borderColor: '#3b82f6',
+                    backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                    fill: true,
+                    tension: 0.4,
+                    borderWidth: 3,
+                    pointRadius: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { grid: { color: gridColor }, ticks: { color: textColor, font: { size: 10 } } },
+                    x: { grid: { display: false }, ticks: { color: textColor, font: { size: 10 } } }
+                }
+            }
+        });
+
+        new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: ['Normal', 'Peak', 'Standby', 'Uplink'],
+                datasets: [{
+                    data: [45, 85, 12, 60],
+                    backgroundColor: ['#10b981', '#ef4444', '#3b82f6', '#f59e0b'],
+                    borderRadius: 12,
+                    barThickness: 30
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { grid: { color: gridColor }, ticks: { color: textColor, font: { size: 10 } } },
+                    x: { grid: { display: false }, ticks: { color: textColor, font: { size: 10 } } }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

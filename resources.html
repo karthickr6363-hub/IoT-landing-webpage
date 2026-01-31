@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Hub | IoT.Connect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { primary: '#3b82f6' },
+                    fontFamily: { inter: ['Inter', 'sans-serif'], outfit: ['Outfit', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Hero -->
+    <section class="relative pt-40 pb-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1600"
+                alt="Resources Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gray-50/90 dark:bg-gray-950/90 backdrop-blur-sm"></div>
+        </div>
+        <div class="container mx-auto px-4 text-center relative z-10 hero-content">
+            <h1 class="mb-6 reveal">Developer <span class="text-blue-600">Ecosystem</span></h1>
+            <p class="text-xl text-gray-500 max-w-2xl mx-auto reveal" style="transition-delay: 0.1s">Everything you need
+                to build secure, robust, and autonomous IoT systems at scale.</p>
+        </div>
+    </section>
+
+    <!-- API Explorer Mockup (Phase 7) -->
+    <section class="py-24 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2 reveal">
+                    <h2 class="mb-6">API <span class="text-blue-600">Explorer</span></h2>
+                    <p class="text-gray-500 mb-8">Test your requests directly from the browser. Our REST API allows you
+                        to query device states, update firmware, and manage automation rules programmatically.</p>
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-xl bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-600">
+                            <h4 class="text-sm font-bold uppercase tracking-widest text-blue-600 mb-2">Endpoint</h4>
+                            <code class="text-xs">GET /v2/devices/{device_id}/telemetry</code>
+                        </div>
+                        <div class="p-4 rounded-xl bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-600">
+                            <h4 class="text-sm font-bold uppercase tracking-widest text-purple-600 mb-2">Auth</h4>
+                            <code class="text-xs">Bearer {YOUR_API_KEY}</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 reveal" style="transition-delay: 0.2s">
+                    <div class="premium-card bg-gray-900 rounded-[2.5rem] p-8 shadow-2xl relative">
+                        <div class="flex items-center gap-2 mb-6">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            <span class="text-xs text-gray-500 ml-4 font-mono">Response Output (JSON)</span>
+                        </div>
+                        <pre class="font-mono text-sm text-blue-400 overflow-x-auto">
+{
+  "status": "success",
+  "data": {
+    "device_id": "iot_node_88x",
+    "timestamp": "2026-01-31T22:15:00Z",
+    "metrics": {
+      "temperature": 24.5,
+      "humidity": 45.2,
+      "battery": 88
+    },
+    "connectivity": "LoRaWAN"
+  }
+}
+                        </pre>
+                        <div class="mt-8 flex justify-end">
+                            <button
+                                class="bg-blue-600 text-white px-6 py-2 rounded-xl text-xs font-bold hover:bg-blue-700 transition-all">Execute
+                                Request <i class="fas fa-play ml-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sandbox Section (Phase 7) -->
+    <section class="py-24 px-4 bg-gray-50 dark:bg-gray-900/50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="mb-4">Developer <span class="text-blue-600">Sandbox</span></h2>
+                <p class="text-gray-500">Jumpstart your project with production-ready code snippets.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="premium-card p-10 rounded-[3rem] reveal bg-white dark:bg-gray-800">
+                    <div class="flex items-center justify-between mb-8">
+                        <h4 class="text-xl">Node.js Implementation</h4>
+                        <div class="flex gap-2">
+                            <span
+                                class="text-[10px] font-bold px-2 py-1 bg-green-100 text-green-600 rounded">v18+</span>
+                        </div>
+                    </div>
+                    <pre
+                        class="bg-gray-900 p-6 rounded-2xl font-mono text-xs text-gray-300 overflow-x-auto leading-relaxed">
+const iot = require('@iot-connect/sdk');
+
+// Initialize client
+const client = new iot.Client('YOUR_KEY');
+
+// List active nodes
+client.getDevices({ status: 'online' })
+  .then(devices => console.log(devices));
+                    </pre>
+                    <button class="mt-8 text-blue-600 font-bold hover:underline flex items-center gap-2">
+                        Get SDK on NPM <i class="fas fa-external-link-alt text-xs"></i>
+                    </button>
+                </div>
+
+                <div class="premium-card p-10 rounded-[3rem] reveal bg-white dark:bg-gray-800"
+                    style="transition-delay: 0.2s">
+                    <div class="flex items-center justify-between mb-8">
+                        <h4 class="text-xl">Python (MicroPython)</h4>
+                        <div class="flex gap-2">
+                            <span
+                                class="text-[10px] font-bold px-2 py-1 bg-yellow-100 text-yellow-600 rounded">ESP32</span>
+                        </div>
+                    </div>
+                    <pre
+                        class="bg-gray-900 p-6 rounded-2xl font-mono text-xs text-gray-300 overflow-x-auto leading-relaxed">
+import iot_connect
+
+gateway = iot_connect.Gateway()
+
+def on_trigger(evt):
+    print("Event caught:", evt.name)
+
+gateway.subscribe("alert/temp", on_trigger)
+                    </pre>
+                    <button class="mt-8 text-blue-600 font-bold hover:underline flex items-center gap-2">
+                        View PyPI Package <i class="fas fa-external-link-alt text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Docs Links -->
+    <section class="py-24 px-4 bg-white dark:bg-gray-950">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="premium-card p-8 rounded-3xl reveal">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center mb-6">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h4 class="mb-4">Getting Started</h4>
+                    <p class="text-sm text-gray-500 mb-6">Learn the fundamentals of IoT.Connect architecture and node
+                        registration.</p>
+                    <a href="#" class="text-blue-600 font-bold text-sm">Read Guides →</a>
+                </div>
+                <div class="premium-card p-8 rounded-3xl reveal" style="transition-delay: 0.1s">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6"><i
+                            class="fas fa-terminal"></i></div>
+                    <h4 class="mb-4">CLI Reference</h4>
+                    <p class="text-sm text-gray-500 mb-6">Manage your local gateways and devices using our command-line
+                        interface tool.</p>
+                    <a href="#" class="text-blue-600 font-bold text-sm">View Commands →</a>
+                </div>
+                <div class="premium-card p-8 rounded-3xl reveal" style="transition-delay: 0.2s">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center mb-6">
+                        <i class="fas fa-blog"></i>
+                    </div>
+                    <h4 class="mb-4">Release Notes</h4>
+                    <p class="text-sm text-gray-500 mb-6">Stay up to date with the latest SDK features and security
+                        patches.</p>
+                    <a href="#" class="text-blue-600 font-bold text-sm">Check Updates →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="shared.js"></script>
+</body>
+
+</html>

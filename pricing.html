@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Plans | IoT.Connect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { colors: { primary: '#3b82f6' }, fontFamily: { inter: ['Inter', 'sans-serif'], outfit: ['Outfit', 'sans-serif'] } } }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Header -->
+    <section class="relative pt-40 pb-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1554224155-1696413565d3?auto=format&fit=crop&q=80&w=1600"
+                alt="Pricing Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gray-50/90 dark:bg-gray-950/90 backdrop-blur-sm"></div>
+        </div>
+        <div class="container mx-auto px-4 text-center hero-content relative z-10">
+            <h1 class="mb-6 reveal">Flexible <span class="text-blue-600">Pricing</span></h1>
+            <p class="text-xl text-gray-500 max-w-2xl mx-auto reveal" style="transition-delay: 0.1s">Choose the plan
+                that fits your scale. From individual developers to global enterprises, we have a tier for you.</p>
+        </div>
+    </section>
+
+    <!-- Plans Grid -->
+    <section class="py-24 px-4 overflow-hidden">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Basic Plan -->
+                <div
+                    class="premium-card p-10 rounded-[2.5rem] bg-white dark:bg-gray-900 flex flex-col items-center text-center reveal">
+                    <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Basic</div>
+                    <div class="text-5xl font-bold mb-6">$0 <span class="text-lg font-normal text-gray-400">/mo</span>
+                    </div>
+                    <p class="text-gray-500 mb-8">Perfect for hobbyists and small home automation projects.</p>
+                    <ul class="text-sm space-y-4 mb-10 text-left w-full">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Up to 5 Devices</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> 7 Days Data Retention</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Community Support</li>
+                        <li class="text-gray-400 line-through"><i class="fas fa-times mr-2"></i> API Access</li>
+                    </ul>
+                    <a href="signup.html"
+                        class="w-full py-4 rounded-xl border border-blue-600 text-blue-600 font-bold hover:bg-blue-600 hover:text-white transition-all transform hover:scale-105">Get
+                        Started</a>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="premium-card p-10 rounded-[2.5rem] bg-white dark:bg-gray-900 flex flex-col items-center text-center border-t-8 border-blue-600 relative overflow-hidden reveal"
+                    style="transition-delay: 0.1s">
+                    <div
+                        class="absolute top-4 right-4 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">
+                        Most Popular</div>
+                    <div class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">Professional</div>
+                    <div class="text-5xl font-bold mb-6">$49 <span class="text-lg font-normal text-gray-400">/mo</span>
+                    </div>
+                    <p class="text-gray-500 mb-8">Ideal for growing businesses and tech-heavy homes.</p>
+                    <ul class="text-sm space-y-4 mb-10 text-left w-full">
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Up to 100 Devices</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> 90 Days Data Retention</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Priority Email Support</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Full API Access</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Custom Dashboards</li>
+                    </ul>
+                    <a href="signup.html"
+                        class="w-full py-4 rounded-xl bg-blue-600 text-white font-bold shadow-xl shadow-blue-500/30 hover:bg-blue-700 transition-all transform hover:scale-105">Upgrade
+                        Now</a>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="premium-card p-10 rounded-[2.5rem] bg-white dark:bg-gray-900 flex flex-col items-center text-center reveal"
+                    style="transition-delay: 0.2s">
+                    <div class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Enterprise</div>
+                    <div class="text-5xl font-bold mb-6">Custom</div>
+                    <p class="text-gray-500 mb-8">Enterprise-grade security and unlimited scalability.</p>
+                    <ul class="text-sm space-y-4 mb-10 text-left w-full">
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Unlimited Devices</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Lifetime Data Retention</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> 24/7 Dedicated Support</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> On-Premise Options</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> SLA Guarantees</li>
+                    </ul>
+                    <a href="contact.html"
+                        class="w-full py-4 rounded-xl bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-bold hover:opacity-80 transition-all transform hover:scale-105">Contact
+                        Sales</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Discount Info -->
+    <section class="py-24 px-4 bg-gray-50 dark:bg-gray-900/50">
+        <div class="container mx-auto text-center reveal">
+            <h3 class="mb-4">Volume Discounts Available</h3>
+            <p class="text-gray-500 mb-10">Deploying more than 500 nodes? You might be eligible for volume hardware
+                discounts and license scaling.</p>
+            <a href="contact.html" class="text-blue-600 font-bold hover:underline">Get a volume quote <i
+                    class="fas fa-arrow-right ml-2"></i></a>
+        </div>
+    </section>
+
+    <script src="shared.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware & Specs | IoT.Connect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { colors: { primary: '#3b82f6' }, fontFamily: { inter: ['Inter', 'sans-serif'], outfit: ['Outfit', 'sans-serif'] } } }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Header -->
+    <section class="relative pt-40 pb-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600"
+                alt="Hardware Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gray-50/90 dark:bg-gray-950/90 backdrop-blur-sm"></div>
+        </div>
+        <div class="container mx-auto px-4 text-center hero-content relative z-10">
+            <h1 class="mb-6 reveal">Advanced <span class="text-blue-600">Hardware</span></h1>
+            <p class="text-xl text-gray-500 max-w-2xl mx-auto reveal" style="transition-delay: 0.1s">
+                Precision-engineered hardware built for reliability in extreme conditions and high-performance
+                throughput.</p>
+        </div>
+    </section>
+
+    <!-- Device Showcase -->
+    <section class="py-24 px-4 overflow-hidden">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32 reveal">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&q=80&w=800"
+                        alt="S1 Gateway" class="rounded-[3rem] shadow-3xl border-8 border-white dark:border-gray-800">
+                </div>
+                <div>
+                    <h2 class="mb-6">S1 Series Gateway</h2>
+                    <p class="text-gray-500 text-lg mb-8">The brain of your IoT infrastructure. The S1 handles up to
+                        2,000 direct connections with multi-radio support and edge-computing capabilities.</p>
+                    <div class="grid grid-cols-2 gap-6 mb-10">
+                        <div class="p-4 rounded-xl bg-gray-50 dark:bg-gray-900">
+                            <div class="text-xs font-bold text-blue-600 uppercase mb-2">Connectivity</div>
+                            <div class="text-sm font-bold">WiFi 6, LoRa, Ziebee</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-gray-50 dark:bg-gray-900">
+                            <div class="text-xs font-bold text-blue-600 uppercase mb-2">Processor</div>
+                            <div class="text-sm font-bold">Quad-Core 1.8GHz</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-gray-50 dark:bg-gray-900">
+                            <div class="text-xs font-bold text-blue-600 uppercase mb-2">Security</div>
+                            <div class="text-sm font-bold">Encrypted HSM 2.0</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-gray-50 dark:bg-gray-900">
+                            <div class="text-xs font-bold text-blue-600 uppercase mb-2">Storage</div>
+                            <div class="text-sm font-bold">32GB eMMC Local</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32 reveal">
+                <div class="order-2 lg:order-1">
+                    <h2 class="mb-6">E4 Edge Nodes</h2>
+                    <p class="text-gray-500 text-lg mb-8">Ultra-low power sensor nodes for distributed data collection.
+                        Designed to last up to 3 years on a single coin cell with integrated environmental sensors.</p>
+                    <div class="grid grid-cols-2 gap-6 mb-10">
+                        <div class="p-4 rounded-xl bg-gray-50 dark:bg-gray-900">
+                            <div class="text-xs font-bold text-green-600 uppercase mb-2">Power</div>
+                            <div class="text-sm font-bold">3.3V / 10uA Sleep</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-gray-50 dark:bg-gray-900">
+                            <div class="text-xs font-bold text-green-600 uppercase mb-2">Sensors</div>
+                            <div class="text-sm font-bold">Temp, Hum, Lux, IMU</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <img src="https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&q=80&w=800"
+                        alt="E4 Node" class="rounded-[3rem] shadow-3xl border-8 border-white dark:border-gray-800">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specs Table -->
+    <section class="py-24 px-4 bg-gray-50 dark:bg-gray-900/50">
+        <div class="container mx-auto">
+            <h2 class="text-center mb-16 reveal">Technical Specifications</h2>
+            <div class="max-w-4xl mx-auto overflow-x-auto reveal" style="transition-delay: 0.1s">
+                <table class="w-full text-left bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-xl">
+                    <thead>
+                        <tr class="bg-blue-600 text-white">
+                            <th class="p-6">Feature</th>
+                            <th class="p-6">Gateway S1-Pro</th>
+                            <th class="p-6">Edge Node E4-Max</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100 dark:divide-gray-800">
+                        <tr>
+                            <td class="p-6 font-bold">OS</td>
+                            <td class="p-6">IoT-Connect OS v4</td>
+                            <td class="p-6">MicroCore v2</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-bold">Range</td>
+                            <td class="p-6">Up to 2km (Line of Sight)</td>
+                            <td class="p-6">Up to 1.2km</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-bold">Encryption</td>
+                            <td class="p-6">TLS 1.3 / AES-256</td>
+                            <td class="p-6">AES-128 Hardware</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-bold">Updates</td>
+                            <td class="p-6">Differential OTA</td>
+                            <td class="p-6">Remote Config Only</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <script src="shared.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Center | IoT.Connect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { colors: { primary: '#3b82f6' }, fontFamily: { inter: ['Inter', 'sans-serif'], outfit: ['Outfit', 'sans-serif'] } } }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Header -->
+    <section class="relative pt-40 pb-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=1600"
+                alt="Support Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-blue-600/90 backdrop-blur-sm"></div>
+        </div>
+        <div class="container mx-auto px-4 text-center text-white relative z-10">
+            <h1 class="text-white mb-8">How can we <span
+                    class="bg-white text-blue-600 px-4 py-1 rounded-lg">help?</span></h1>
+            <div class="max-w-2xl mx-auto relative">
+                <input type="text" class="w-full py-5 px-8 rounded-2xl bg-white text-gray-900 shadow-2xl outline-none"
+                    placeholder="Search for guides, devices, or APIs...">
+                <button class="absolute right-4 top-1/2 -translate-y-1/2 bg-blue-600 text-white p-3 rounded-xl"><i
+                        class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Categories -->
+    <section class="py-24 px-4 bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="premium-card p-8 rounded-3xl text-center">
+                    <div
+                        class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center text-blue-600 mx-auto mb-6">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h4 class="mb-4">Getting Started</h4>
+                    <p class="text-sm text-gray-500 mb-6">Learn the basics of setting up your first gateway.</p>
+                    <a href="#" class="text-blue-600 font-bold text-sm">12 Articles</a>
+                </div>
+                <div class="premium-card p-8 rounded-3xl text-center">
+                    <div
+                        class="w-14 h-14 bg-green-50 dark:bg-green-900/30 rounded-2xl flex items-center justify-center text-green-600 mx-auto mb-6">
+                        <i class="fas fa-microchip text-xl"></i>
+                    </div>
+                    <h4 class="mb-4">Hardware Help</h4>
+                    <p class="text-sm text-gray-500 mb-6">Troubleshooting and connectivity guides.</p>
+                    <a href="#" class="text-blue-600 font-bold text-sm">45 Articles</a>
+                </div>
+                <div class="premium-card p-8 rounded-3xl text-center">
+                    <div
+                        class="w-14 h-14 bg-purple-50 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center text-purple-600 mx-auto mb-6">
+                        <i class="fas fa-cloud text-xl"></i>
+                    </div>
+                    <h4 class="mb-4">Cloud & Storage</h4>
+                    <p class="text-sm text-gray-500 mb-6">Data retention and dashboard configuration.</p>
+                    <a href="#" class="text-blue-600 font-bold text-sm">28 Articles</a>
+                </div>
+                <div class="premium-card p-8 rounded-3xl text-center">
+                    <div
+                        class="w-14 h-14 bg-orange-50 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center text-orange-600 mx-auto mb-6">
+                        <i class="fas fa-user-shield text-xl"></i>
+                    </div>
+                    <h4 class="mb-4">Billing & Security</h4>
+                    <p class="text-sm text-gray-500 mb-6">Manage your subscription and auth.</p>
+                    <a href="#" class="text-blue-600 font-bold text-sm">15 Articles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="py-24">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-center mb-16">Common Questions</h2>
+            <div class="space-y-6">
+                <div class="premium-card p-6 rounded-2xl">
+                    <h4 class="mb-2">How many devices can I connect to one gateway?</h4>
+                    <p class="text-gray-500 dark:text-gray-400">The S1 Gateway supports up to 2,000 direct connections
+                        and over 10,000 in a mesh network.</p>
+                </div>
+                <div class="premium-card p-6 rounded-2xl">
+                    <h4 class="mb-2">Does the platform work without internet?</h4>
+                    <p class="text-gray-500 dark:text-gray-400">Yes, our edge computing architecture allows local
+                        automation to continue even if the cloud connection is lost.</p>
+                </div>
+                <div class="premium-card p-6 rounded-2xl">
+                    <h4 class="mb-2">What is the battery life of the E4 Edge Node?</h4>
+                    <p class="text-gray-500 dark:text-gray-400">Typical battery life is 2-3 years depending on the
+                        sampling frequency and transmission power settings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="shared.js"></script>
+</body>
+
+</html>

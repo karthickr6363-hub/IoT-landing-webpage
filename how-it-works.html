@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works | IoT.Connect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { colors: { primary: '#3b82f6' }, fontFamily: { inter: ['Inter', 'sans-serif'], outfit: ['Outfit', 'sans-serif'] } } }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Header -->
+    <section class="relative pt-40 pb-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=1600"
+                alt="How It Works Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gray-50/90 dark:bg-gray-950/90 backdrop-blur-sm"></div>
+        </div>
+        <div class="container mx-auto px-4 text-center hero-content relative z-10">
+            <h1 class="mb-6 reveal">Simplicity is <span class="text-blue-600">Power</span></h1>
+            <p class="text-xl text-gray-500 max-w-2xl mx-auto reveal" style="transition-delay: 0.1s">Deploying advanced
+                IoT infrastructure shouldn't be complicated. Follow our four-step setup to go live in minutes.</p>
+        </div>
+    </section>
+
+    <!-- Workflow Steps -->
+    <section class="py-24 px-4 overflow-hidden">
+        <div class="container mx-auto">
+            <div class="space-y-32">
+
+                <!-- Step 1 -->
+                <div class="flex flex-col lg:flex-row items-center gap-16 reveal">
+                    <div class="lg:w-1/2">
+                        <div class="text-5xl font-extrabold text-blue-600/20 mb-4">01</div>
+                        <h2 class="mb-6">Plug & Power</h2>
+                        <p class="text-gray-500 text-lg mb-8">Connect your Smart Gateway S1 to powers and your local
+                            network router via Ethernet or WiFi. The gateway automatically initializes and checks for
+                            the latest security patches.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-blue-500"></i>
+                                Auto-detection of local network</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-blue-500"></i> Hardware
+                                self-diagnostic</li>
+                        </ul>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800"
+                            alt="Step 1" class="rounded-[3rem] shadow-2xl">
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-16 reveal">
+                    <div class="lg:w-1/2">
+                        <div class="text-5xl font-extrabold text-blue-600/20 mb-4">02</div>
+                        <h2 class="mb-6">Claim Device</h2>
+                        <p class="text-gray-500 text-lg mb-8">Download the IoT.Connect app or log in via the web
+                            dashboard. Scan the unique QR code on your gateway to link it to your account instantly.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-blue-500"></i> Zero-Config
+                                pairing</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-blue-500"></i> Encrypted
+                                owner verification</li>
+                        </ul>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+                            alt="Step 2" class="rounded-[3rem] shadow-2xl">
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col lg:flex-row items-center gap-16 reveal">
+                    <div class="lg:w-1/2">
+                        <div class="text-5xl font-extrabold text-blue-600/20 mb-4">03</div>
+                        <h2 class="mb-6">Deploy Nodes</h2>
+                        <p class="text-gray-500 text-lg mb-8">Place your E4 Edge Nodes within the gateway coverage area.
+                            They will automatically form a secure mesh network and begin streaming telemetry data.</p>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
+                            alt="Step 3" class="rounded-[3rem] shadow-2xl">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="shared.js"></script>
+</body>
+
+</html>

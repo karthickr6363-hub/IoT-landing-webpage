@@ -92,9 +92,9 @@ function renderNavbar(isDashboard) {
                                 </button>
                                 <div class="absolute top-full left-0 w-56 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
                                     <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-100 dark:border-gray-800 p-2">
-                                        <a href="resources.html" class="block px-4 py-3 rounded-xl text-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Documentation</a>
-                                        <a href="resources.html" class="block px-4 py-3 rounded-xl text-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">API Reference</a>
-                                        <a href="resources.html" class="block px-4 py-3 rounded-xl text-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Developer Blog</a>
+                                        <a href="resources.html" class="block px-4 py-3 rounded-xl text-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors ${currentPage === 'resources.html' ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400' : ''}">Documentation</a>
+                                        <a href="resources.html" class="block px-4 py-3 rounded-xl text-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors ${currentPage === 'resources.html' ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400' : ''}">API Reference</a>
+                                        <a href="resources.html" class="block px-4 py-3 rounded-xl text-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors ${currentPage === 'resources.html' ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400' : ''}">Developer Blog</a>
                                     </div>
                                 </div>
                             </div>
@@ -130,10 +130,10 @@ function renderNavbar(isDashboard) {
     mobileMenu.className = 'fixed inset-0 z-[60] transform -translate-x-full transition-transform duration-300 lg:hidden';
     mobileMenu.innerHTML = `
         <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="toggleMobileMenu()"></div>
-        <div class="absolute inset-y-0 left-0 w-80 bg-white dark:bg-gray-900 shadow-2xl p-6">
+        <div class="absolute inset-y-0 left-0 w-80 bg-white dark:bg-gray-900 shadow-2xl p-6 overflow-y-auto">
             <div class="flex items-center justify-between mb-8">
                 <a href="index.html" class="flex items-center gap-2">
-                    <img src="${BRAND_LOGO_URL}" alt="Logo" class="w-8 h-8">
+                    <img src="${BRAND_LOGO_URL}" alt="Logo" class="w-10 h-10">
                     <span class="text-xl font-bold font-outfit text-gray-900 dark:text-white">${BRAND_NAME}</span>
                 </a>
                 <button onclick="toggleMobileMenu()" class="p-2 text-gray-500 hover:text-red-500">
@@ -188,8 +188,8 @@ function renderFooter() {
                 </div>
                 
                 <div>
-                    <h4 class="text-gray-900 dark:text-white mb-6">Company</h4>
-                    <ul class="space-y-4">
+                    <h4 class="text-gray-900 dark:text-white mb-6 text-center">Company</h4>
+                    <ul class="space-y-4 text-center">
                         <li><a href="about.html" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About Us</a></li>
                         <li><a href="features.html" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Features</a></li>
                         <li><a href="pricing.html" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Pricing</a></li>
@@ -198,8 +198,8 @@ function renderFooter() {
                 </div>
 
                 <div>
-                    <h4 class="text-gray-900 dark:text-white mb-6">Resources</h4>
-                    <ul class="space-y-4">
+                    <h4 class="text-gray-900 dark:text-white mb-6 text-center">Resources</h4>
+                    <ul class="space-y-4 text-center">
                         <li><a href="resources.html" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Documentation</a></li>
                         <li><a href="resources.html" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">API Reference</a></li>
                         <li><a href="how-it-works.html" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">How It Works</a></li>
@@ -208,8 +208,8 @@ function renderFooter() {
                 </div>
 
                 <div>
-                    <h4 class="text-gray-900 dark:text-white mb-6">Legal</h4>
-                    <ul class="space-y-4">
+                    <h4 class="text-gray-900 dark:text-white mb-6 text-center">Legal</h4>
+                    <ul class="space-y-4 text-center">
                         <li><a href="privacy.html" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Privacy Policy</a></li>
                         <li><a href="terms.html" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Terms of Service</a></li>
                         <li><a href="compliance.html" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Compliance</a></li>

@@ -70,7 +70,7 @@
         </aside>
 
         <!-- Main Content Area -->
-        <main class="flex-grow lg:ml-72 flex flex-col">
+        <main class="flex-grow lg:ml-72 flex flex-col pt-20">
 
             <!-- Dashboard Header -->
             <header
@@ -79,7 +79,7 @@
                     <button class="lg:hidden p-2 text-gray-500" onclick="toggleMobileDashboardNav()">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
-                    <h2 class="text-xl font-bold">Global Dashboard</h2>
+                    <h2 class="text-xl font-bold text-center">Global Dashboard</h2>
                 </div>
 
                 <div class="flex items-center gap-6">
@@ -109,9 +109,9 @@
 
                 <!-- Infrastructure Map Mockup (Phase 7) -->
                 <div class="premium-card p-0 rounded-[2.5rem] bg-white dark:bg-gray-900 overflow-hidden reveal">
-                    <div class="p-8 border-b border-gray-100 dark:border-gray-800 flex items-center justify-between">
-                        <div>
-                            <h3 class="text-lg mb-1">Fleet Distribution</h3>
+                    <div class="p-8 border-b border-gray-100 dark:border-gray-800 flex flex-col items-center justify-center">
+                        <div class="text-center mb-4">
+                            <h3 class="text-lg mb-1 text-center">Fleet Distribution</h3>
                             <p class="text-xs text-gray-500">Live global node density map</p>
                         </div>
                         <div class="flex gap-2">
@@ -184,8 +184,10 @@
                 <!-- Charts Row -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 reveal" style="transition-delay: 0.2s">
                     <div class="premium-card p-8 rounded-[2rem] bg-white dark:bg-gray-900">
-                        <div class="flex items-center justify-between mb-8">
-                            <h3 class="text-lg">Telemetry Stream</h3>
+                        <div class="flex items-center justify-center mb-8">
+                            <h3 class="text-lg text-center">Telemetry Stream</h3>
+                        </div>
+                        <div class="flex justify-center mb-8">
                             <button class="text-blue-600 text-xs font-bold">Export Logs</button>
                         </div>
                         <div class="h-64">
@@ -193,8 +195,10 @@
                         </div>
                     </div>
                     <div class="premium-card p-8 rounded-[2rem] bg-white dark:bg-gray-900">
-                        <div class="flex items-center justify-between mb-8">
-                            <h3 class="text-lg">Power Consumption</h3>
+                        <div class="flex items-center justify-center mb-8">
+                            <h3 class="text-lg text-center">Power Consumption</h3>
+                        </div>
+                        <div class="flex justify-center mb-8">
                             <select
                                 class="bg-gray-50 dark:bg-gray-800 border-none rounded-lg text-[10px] font-bold px-3 py-1 outline-none">
                                 <option>Watts (W)</option>

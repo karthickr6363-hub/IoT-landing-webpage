@@ -31,7 +31,7 @@
             <div class="absolute inset-0 bg-gray-50/90 dark:bg-gray-950/90 backdrop-blur-sm"></div>
         </div>
         <div class="container mx-auto px-4 text-center relative z-10 hero-content">
-            <h1 class="mb-6 reveal">Developer <span class="text-blue-600">Ecosystem</span></h1>
+            <h1 class="mb-6 reveal font-bold text-center">Developer <span class="text-blue-600">Ecosystem</span></h1>
             <p class="text-xl text-gray-500 max-w-2xl mx-auto reveal" style="transition-delay: 0.1s">Everything you need
                 to build secure, robust, and autonomous IoT systems at scale.</p>
         </div>
@@ -42,16 +42,16 @@
         <div class="container mx-auto">
             <div class="flex flex-col lg:flex-row gap-16 items-center">
                 <div class="lg:w-1/2 reveal">
-                    <h2 class="mb-6">API <span class="text-blue-600">Explorer</span></h2>
+                    <h2 class="mb-6 font-bold text-center">API <span class="text-blue-600">Explorer</span></h2>
                     <p class="text-gray-500 mb-8">Test your requests directly from the browser. Our REST API allows you
                         to query device states, update firmware, and manage automation rules programmatically.</p>
                     <div class="space-y-4">
                         <div class="p-4 rounded-xl bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-600">
-                            <h4 class="text-sm font-bold uppercase tracking-widest text-blue-600 mb-2">Endpoint</h4>
+                            <h4 class="text-sm font-bold uppercase tracking-widest text-blue-600 mb-2 text-center">Endpoint</h4>
                             <code class="text-xs">GET /v2/devices/{device_id}/telemetry</code>
                         </div>
                         <div class="p-4 rounded-xl bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-600">
-                            <h4 class="text-sm font-bold uppercase tracking-widest text-purple-600 mb-2">Auth</h4>
+                            <h4 class="text-sm font-bold uppercase tracking-widest text-purple-600 mb-2 text-center">Auth</h4>
                             <code class="text-xs">Bearer {YOUR_API_KEY}</code>
                         </div>
                     </div>
@@ -94,14 +94,14 @@
     <section class="py-24 px-4 bg-gray-50 dark:bg-gray-900/50">
         <div class="container mx-auto">
             <div class="text-center mb-16 reveal">
-                <h2 class="mb-4">Developer <span class="text-blue-600">Sandbox</span></h2>
+                <h2 class="mb-4 font-bold text-center">Developer <span class="text-blue-600">Sandbox</span></h2>
                 <p class="text-gray-500">Jumpstart your project with production-ready code snippets.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div class="premium-card p-10 rounded-[3rem] reveal bg-white dark:bg-gray-800">
                     <div class="flex items-center justify-between mb-8">
-                        <h4 class="text-xl">Node.js Implementation</h4>
+                        <h4 class="text-xl font-bold text-center">Node.js Implementation</h4>
                         <div class="flex gap-2">
                             <span
                                 class="text-[10px] font-bold px-2 py-1 bg-green-100 text-green-600 rounded">v18+</span>
@@ -118,7 +118,7 @@ const client = new iot.Client('YOUR_KEY');
 client.getDevices({ status: 'online' })
   .then(devices => console.log(devices));
                     </pre>
-                    <button class="mt-8 text-blue-600 font-bold hover:underline flex items-center gap-2">
+                    <button class="mt-8 text-blue-600 font-bold hover:underline flex items-center gap-2 justify-center">
                         Get SDK on NPM <i class="fas fa-external-link-alt text-xs"></i>
                     </button>
                 </div>
@@ -126,7 +126,7 @@ client.getDevices({ status: 'online' })
                 <div class="premium-card p-10 rounded-[3rem] reveal bg-white dark:bg-gray-800"
                     style="transition-delay: 0.2s">
                     <div class="flex items-center justify-between mb-8">
-                        <h4 class="text-xl">Python (MicroPython)</h4>
+                        <h4 class="text-xl font-bold text-center">Python (MicroPython)</h4>
                         <div class="flex gap-2">
                             <span
                                 class="text-[10px] font-bold px-2 py-1 bg-yellow-100 text-yellow-600 rounded">ESP32</span>
@@ -143,7 +143,7 @@ def on_trigger(evt):
 
 gateway.subscribe("alert/temp", on_trigger)
                     </pre>
-                    <button class="mt-8 text-blue-600 font-bold hover:underline flex items-center gap-2">
+                    <button class="mt-8 text-blue-600 font-bold hover:underline flex items-center gap-2 justify-center">
                         View PyPI Package <i class="fas fa-external-link-alt text-xs"></i>
                     </button>
                 </div>
@@ -160,28 +160,28 @@ gateway.subscribe("alert/temp", on_trigger)
                         class="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center mb-6">
                         <i class="fas fa-book"></i>
                     </div>
-                    <h4 class="mb-4">Getting Started</h4>
+                    <h4 class="mb-4 font-bold text-center">Getting Started</h4>
                     <p class="text-sm text-gray-500 mb-6">Learn the fundamentals of IoT.Connect architecture and node
                         registration.</p>
-                    <a href="#" class="text-blue-600 font-bold text-sm">Read Guides →</a>
+                    <a href="#" class="text-blue-600 font-bold text-sm block text-center">Read Guides →</a>
                 </div>
                 <div class="premium-card p-8 rounded-3xl reveal" style="transition-delay: 0.1s">
                     <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6"><i
                             class="fas fa-terminal"></i></div>
-                    <h4 class="mb-4">CLI Reference</h4>
+                    <h4 class="mb-4 font-bold text-center">CLI Reference</h4>
                     <p class="text-sm text-gray-500 mb-6">Manage your local gateways and devices using our command-line
                         interface tool.</p>
-                    <a href="#" class="text-blue-600 font-bold text-sm">View Commands →</a>
+                    <a href="#" class="text-blue-600 font-bold text-sm block text-center">View Commands →</a>
                 </div>
                 <div class="premium-card p-8 rounded-3xl reveal" style="transition-delay: 0.2s">
                     <div
                         class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center mb-6">
                         <i class="fas fa-blog"></i>
                     </div>
-                    <h4 class="mb-4">Release Notes</h4>
+                    <h4 class="mb-4 font-bold text-center">Release Notes</h4>
                     <p class="text-sm text-gray-500 mb-6">Stay up to date with the latest SDK features and security
                         patches.</p>
-                    <a href="#" class="text-blue-600 font-bold text-sm">Check Updates →</a>
+                    <a href="#" class="text-blue-600 font-bold text-sm block text-center">Check Updates →</a>
                 </div>
             </div>
         </div>

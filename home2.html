@@ -37,7 +37,7 @@
         <div class="container mx-auto px-4 relative z-10">
             <div class="flex flex-col items-center text-center gap-16">
                 <div class="max-w-2xl">
-                    <h1 class="text-gray-900 dark:text-white mb-8 leading-tight font-bold text-center">
+                    <h1 class="text-gray-900 dark:text-white mb-8 leading-tight font-extrabold text-center">
                         Powering the <br><span class="text-blue-600">Next Industrial</span> <br>Revolution.
                     </h1>
                     <p class="text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-xl">
@@ -99,52 +99,107 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Column 1 -->
                 <div
-                    class="md:col-span-2 premium-card p-10 rounded-[2rem] bg-gradient-to-br from-blue-600 to-indigo-700 text-white border-none group overflow-hidden relative">
+                    class="md:col-span-2 premium-card p-10 rounded-[2rem] bg-gradient-to-br from-blue-600 to-indigo-700 text-white border-none group overflow-hidden relative text-center flex flex-col items-center">
                     <div class="relative z-10">
                         <h3 class="text-white text-3xl mb-6 font-bold text-center">Advanced Edge Computing</h3>
-                        <p class="text-blue-100 text-lg mb-10 max-w-lg">Process data where it's generated. Reduce
+                        <p class="text-blue-100 text-lg mb-10 max-w-lg mx-auto">Process data where it's generated.
+                            Reduce
                             latency and continue operations even without internet connectivity.</p>
                         <a href="features.html"
-                            class="bg-white text-blue-600 px-6 py-3 rounded-xl font-bold inline-block hover:shadow-xl transition-all mx-auto block text-center">Explore
+                            class="bg-white text-blue-600 px-8 py-3 rounded-xl font-bold inline-block hover:shadow-xl transition-all mx-auto">Explore
                             Tech</a>
                     </div>
                 </div>
 
                 <!-- Column 2 -->
-                <div class="premium-card p-10 rounded-[2rem] flex flex-col justify-between">
-                    <div>
+                <div class="premium-card p-10 rounded-[2rem] flex flex-col items-center text-center">
+                    <div class="mb-6">
                         <div
-                            class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-600 mb-6">
+                            class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-600 mx-auto">
                             <i class="fas fa-microchip"></i>
                         </div>
-                        <h3 class="mb-4 font-bold text-center">Hardware Vault</h3>
                     </div>
+                    <h3 class="mb-4 font-bold">Hardware Vault</h3>
                     <p class="text-gray-500 dark:text-gray-400">Physical security for cryptographic keys and sensitive
                         data storage.</p>
                 </div>
 
                 <!-- Column 3 -->
-                <div class="premium-card p-10 rounded-[2rem] flex flex-col justify-between">
-                    <div>
+                <div class="premium-card p-10 rounded-[2rem] flex flex-col items-center text-center">
+                    <div class="mb-6">
                         <div
-                            class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center text-purple-600 mb-6">
+                            class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center text-purple-600 mx-auto">
                             <i class="fas fa-layer-group"></i>
                         </div>
-                        <h3 class="mb-4 font-bold text-center">Multi-Tenant</h3>
                     </div>
+                    <h3 class="mb-4 font-bold">Multi-Tenant</h3>
                     <p class="text-gray-500 dark:text-gray-400">Easily manage multiple sites, factories, or client
                         projects from one UI.</p>
                 </div>
 
                 <!-- Column 4 -->
-                <div class="md:col-span-2 premium-card p-10 rounded-[2rem] flex items-center justify-between gap-8">
-                    <div>
-                        <h3 class="mb-4 font-bold text-center">Global Deployment</h3>
-                        <p class="text-gray-500 dark:text-gray-400">Our cloud partners ensure low latency in over 40
+                <div
+                    class="md:col-span-2 premium-card p-10 rounded-[2rem] flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-8">
+                    <div class="flex-1 text-center">
+                        <h3 class="mb-4 font-bold">Global Deployment</h3>
+                        <p class="text-gray-500 dark:text-gray-400 max-w-lg mx-auto">Our cloud partners ensure low
+                            latency in over 40
                             deployment regions worldwide.</p>
                     </div>
                     <div class="hidden sm:block">
                         <i class="fas fa-globe-americas text-6xl text-blue-600/20"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Trust Center (Task 19) -->
+    <section class="py-24 px-4 bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-gray-800">
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 reveal">
+                    <div
+                        class="inline-block px-3 py-1 bg-green-100 text-green-600 rounded-full text-[10px] font-bold uppercase mb-4 tracking-widest">
+                        Enterprise Priority</div>
+                    <h2 class="mb-6 font-bold text-center">Standardized <span class="text-blue-600">Trust Center</span>
+                    </h2>
+                    <p class="text-gray-500 mb-8 max-w-lg">Security is not an add-on; it's the foundation of
+                        IoT.Connect. Every device, every packet, and every user interaction is verified in real-time.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-gray-50 dark:bg-gray-900/50">
+                            <i class="fas fa-shield-alt text-blue-600 mt-1"></i>
+                            <div>
+                                <h4 class="text-sm font-bold">SOC2 Type II Compliant</h4>
+                                <p class="text-xs text-gray-500">Rigorous independent audits of our security,
+                                    availability, and privacy controls.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-gray-50 dark:bg-gray-900/50">
+                            <i class="fas fa-lock text-blue-600 mt-1"></i>
+                            <div>
+                                <h4 class="text-sm font-bold">End-to-End HSM Protection</h4>
+                                <p class="text-xs text-gray-500">Hardware Security Modules protect all cryptographic
+                                    keys from extraction.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 reveal" style="transition-delay: 0.2s">
+                    <div class="premium-card p-1 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-[3rem]">
+                        <div class="bg-white dark:bg-gray-900 p-12 rounded-[2.9rem] flex flex-col items-center">
+                            <div
+                                class="w-16 h-16 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 mb-6">
+                                <i class="fas fa-fingerprint text-2xl"></i>
+                            </div>
+                            <h3 class="font-bold mb-4">Real-Time Threat Intelligence</h3>
+                            <p class="text-sm text-gray-500 text-center mb-8">Our AI-driven Security Operations Center
+                                (SOC) monitors for anomaly detection across 1M+ nodes.</p>
+                            <a href="contact.html"
+                                class="px-8 py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-all">Download
+                                Security Whitepaper</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -156,33 +211,39 @@
         <div class="container mx-auto">
             <h2 class="text-center mb-16 font-bold text-center">Loved by Engineers</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div class="premium-card p-8 rounded-3xl">
-                    <p class="text-gray-600 dark:text-gray-400 italic mb-6">"IoT.Connect has transformed how we monitor
+                <div class="premium-card p-8 rounded-3xl text-center flex flex-col items-center">
+                    <p class="text-gray-600 dark:text-gray-400 italic mb-8">"IoT.Connect has transformed how we monitor
                         our factory floor. The latency is practically non-existent."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-gray-200"></div>
+                    <div class="flex flex-col items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200"
+                            alt="Sarah Jenkins"
+                            class="w-16 h-16 rounded-full object-cover border-2 border-blue-100 dark:border-blue-900/30">
                         <div>
                             <div class="font-bold">Sarah Jenkins</div>
                             <div class="text-xs text-gray-500 uppercase tracking-tighter">CTO, TechFab</div>
                         </div>
                     </div>
                 </div>
-                <div class="premium-card p-8 rounded-3xl">
-                    <p class="text-gray-600 dark:text-gray-400 italic mb-6">"Scaling from 10 to 10,000 devices was
+                <div class="premium-card p-8 rounded-3xl text-center flex flex-col items-center">
+                    <p class="text-gray-600 dark:text-gray-400 italic mb-8">"Scaling from 10 to 10,000 devices was
                         seamless. Their API is a developer's dream come true."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-gray-200"></div>
+                    <div class="flex flex-col items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
+                            alt="Michael Chen"
+                            class="w-16 h-16 rounded-full object-cover border-2 border-blue-100 dark:border-blue-900/30">
                         <div>
                             <div class="font-bold">Michael Chen</div>
                             <div class="text-xs text-gray-500 uppercase tracking-tighter">Lead Dev, AgriGrow</div>
                         </div>
                     </div>
                 </div>
-                <div class="premium-card p-8 rounded-3xl">
-                    <p class="text-gray-600 dark:text-gray-400 italic mb-6">"Security was our top priority. IoT.Connect
+                <div class="premium-card p-8 rounded-3xl text-center flex flex-col items-center">
+                    <p class="text-gray-600 dark:text-gray-400 italic mb-8">"Security was our top priority. IoT.Connect
                         passed every audit with flying colors."</p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-gray-200"></div>
+                    <div class="flex flex-col items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200"
+                            alt="David Miller"
+                            class="w-16 h-16 rounded-full object-cover border-2 border-blue-100 dark:border-blue-900/30">
                         <div>
                             <div class="font-bold">David Miller</div>
                             <div class="text-xs text-gray-500 uppercase tracking-tighter">Security Arch, SafeNet</div>
@@ -192,7 +253,7 @@
             </div>
             <div class="text-center">
                 <a href="resources.html"
-                    class="inline-block bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-10 py-4 rounded-xl font-bold hover:shadow-xl transition-all">Read
+                    class="inline-block bg-gray-900 dark:bg-transparent border-2 border-gray-900 dark:border-blue-600 text-white dark:text-blue-600 px-10 py-4 rounded-xl font-bold hover:shadow-xl hover:shadow-blue-500/20 transition-all">Read
                     More Reviews</a>
             </div>
         </div>

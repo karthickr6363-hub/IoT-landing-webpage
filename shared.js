@@ -72,7 +72,7 @@ function renderNavbar(isDashboard) {
     if (currentPage === '') currentPage = 'index.html';
 
     const nav = document.createElement('nav');
-    nav.className = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-[70px] flex items-center glass border-b border-gray-200 dark:border-gray-800 px-4 md:px-8`;
+    nav.className = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-[70px] ${isDashboard ? 'hidden lg:flex' : 'flex'} items-center glass border-b border-gray-200 dark:border-gray-800 px-4 md:px-8`;
 
     // Desktop Nav
     let navContent = `

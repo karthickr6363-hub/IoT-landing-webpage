@@ -27,8 +27,8 @@
     <div class="flex min-h-screen">
 
         <!-- Sidebar Navigation -->
-        <aside
-            class="hidden lg:flex w-72 flex-col bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 fixed h-full z-40">
+        <aside 31:
+            class="hidden xl:flex w-72 flex-col bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 fixed h-full z-40">
             <div class="p-8">
                 <a href="index.html" class="flex items-center gap-2">
                     <img src="https://cdn-icons-png.flaticon.com/512/3208/3208764.png" alt="Logo" class="w-8 h-8">
@@ -70,13 +70,13 @@
         </aside>
 
         <!-- Main Content Area -->
-        <main class="flex-grow lg:ml-72 flex flex-col pt-20">
+        <main class="flex-grow xl:ml-72 flex flex-col pt-0">
 
             <!-- Dashboard Header -->
             <header
-                class="h-20 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 sticky top-0 z-30 px-4 md:px-8 flex items-center justify-between">
+                class="h-16 xl:h-20 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 sticky top-0 z-30 px-4 md:px-8 flex items-center justify-between">
                 <div class="flex items-center gap-4">
-                    <button class="lg:hidden p-2 text-gray-500" onclick="toggleMobileDashboardNav()">
+                    <button class="xl:hidden p-2 text-gray-500" onclick="toggleMobileDashboardNav()">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                     <h2 class="text-xl font-bold text-center">Global Dashboard</h2>
@@ -220,7 +220,7 @@
 
     <!-- Mobile Navigation -->
     <div id="mobile-dash-nav"
-        class="fixed inset-0 z-50 transform -translate-x-full transition-transform duration-300 lg:hidden">
+        class="fixed inset-0 z-50 transform -translate-x-full transition-transform duration-300 xl:hidden">
         <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="toggleMobileDashboardNav()"></div>
         <div class="absolute inset-y-0 left-0 w-72 bg-white dark:bg-gray-900 shadow-2xl p-6">
             <div class="flex items-center justify-between mb-10">

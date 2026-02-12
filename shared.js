@@ -45,7 +45,7 @@ function injectComponents() {
     const isLoginPage = path.includes('login.html') || path.includes('signup.html');
     const isDashboard = path.includes('dashboard.html');
 
-    if (!isLoginPage) {
+    if (!isLoginPage && !isDashboard) {
         renderNavbar(isDashboard);
     }
 
@@ -72,7 +72,7 @@ function renderNavbar(isDashboard) {
     if (currentPage === '') currentPage = 'index.html';
 
     const nav = document.createElement('nav');
-    nav.className = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-[70px] ${isDashboard ? 'hidden lg:flex' : 'flex'} items-center glass border-b border-gray-200 dark:border-gray-800 px-4 md:px-8`;
+    nav.className = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-[70px] ${isDashboard ? 'hidden xl:flex' : 'flex'} items-center glass border-b border-gray-200 dark:border-gray-800 px-4 md:px-8`;
 
     // Desktop Nav
     let navContent = `
@@ -82,7 +82,7 @@ function renderNavbar(isDashboard) {
                 <span class="text-xl font-bold font-outfit text-gray-900 dark:text-white">${BRAND_NAME}</span>
             </a>
             
-            <div class="hidden lg:flex items-center space-x-1">
+            <div class="hidden xl:flex items-center space-x-1">
                 ${pages.map(p => {
         if (p.name === 'Resources') {
             return `
@@ -113,8 +113,8 @@ function renderNavbar(isDashboard) {
                     <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
                     <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M4 9h1m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                 </button>
-                <a href="signup.html" class="hidden md:block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-semibold transition-all hover:shadow-lg hover:shadow-blue-500/30">Get Started</a>
-                <button onclick="toggleMobileMenu()" class="lg:hidden p-2">
+                <a href="signup.html" class="hidden xl:block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-semibold transition-all hover:shadow-lg hover:shadow-blue-500/30">Get Started</a>
+                <button onclick="toggleMobileMenu()" class="xl:hidden p-2">
                     <svg class="w-6 h-6 text-gray-700 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
@@ -127,7 +127,7 @@ function renderNavbar(isDashboard) {
     // Rule 14: Mobile Slider Menu (from left)
     const mobileMenu = document.createElement('div');
     mobileMenu.id = 'mobile-menu';
-    mobileMenu.className = 'fixed inset-0 z-[60] transform -translate-x-full transition-transform duration-300 lg:hidden';
+    mobileMenu.className = 'fixed inset-0 z-[60] transform -translate-x-full transition-transform duration-300 xl:hidden';
     mobileMenu.innerHTML = `
         <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="toggleMobileMenu()"></div>
         <div class="absolute inset-y-0 left-0 w-80 bg-white dark:bg-gray-900 shadow-2xl p-6 overflow-y-auto">

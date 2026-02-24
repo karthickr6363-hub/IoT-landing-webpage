@@ -84,22 +84,11 @@ function renderNavbar(isDashboard) {
             
             <div class="hidden xl:flex items-center space-x-1">
                 ${pages.map(p => {
-        if (p.name === 'Resources') {
-            return `
-                            <div class="relative group h-full flex items-center">
-                                <button class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 flex items-center gap-1">
-                                    Resources <i class="fas fa-chevron-down text-[10px]"></i>
-                                </button>
-                                <div class="absolute top-full left-0 w-56 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
-                                    <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-100 dark:border-gray-800 p-2">
-                                        <a href="resources.html" class="block px-4 py-3 rounded-xl text-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors ${currentPage === 'resources.html' ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400' : ''}">Documentation</a>
-                                        <a href="resources.html" class="block px-4 py-3 rounded-xl text-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors ${currentPage === 'resources.html' ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400' : ''}">API Reference</a>
-                                        <a href="resources.html" class="block px-4 py-3 rounded-xl text-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors ${currentPage === 'resources.html' ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400' : ''}">Developer Blog</a>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-        }
+        return `
+                        <a href="${p.url}" class="nav-link px-3 py-2 rounded-md text-sm font-medium transition-colors ${currentPage === p.url ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30' : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'}">
+                            ${p.name}
+                        </a>
+                    `;
         return `
                         <a href="${p.url}" class="nav-link px-3 py-2 rounded-md text-sm font-medium transition-colors ${currentPage === p.url ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30' : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'}">
                             ${p.name}
